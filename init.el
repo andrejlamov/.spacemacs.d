@@ -17,7 +17,7 @@
      my-java
      hello-layer
      )
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(evil-goggles)
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '()
    dotspacemacs-install-packages 'used-only))
@@ -101,6 +101,9 @@
 (defun dotspacemacs/user-config ()
   (setq ace-jump-helm-line-autoshow-use-linum t
         ace-jump-helm-line-default-action 'select
-        ace-jump-helm-line-style 'pre))
+        ace-jump-helm-line-style 'pre)
+
+  (evil-goggles-mode)
+  (evil-goggles-use-diff-faces))
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
