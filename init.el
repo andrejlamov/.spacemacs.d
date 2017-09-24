@@ -11,9 +11,11 @@ This function should only modify configuration layer settings."
      helm
      emacs-lisp
      git
+     scala
 
-     ;; My layers
+     ;; Layers with personal customization
      my-clojure
+     my-java
      hello-layer
      )
    dotspacemacs-additional-packages '()
@@ -104,7 +106,8 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  )
+(push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
+(push '(ensime . "melpa-stable") package-pinned-packages))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
