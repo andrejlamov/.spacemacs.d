@@ -13,6 +13,7 @@ This function should only modify configuration layer settings."
      git
 
      ;; My layers
+     my-clojure
      hello-layer
      )
    dotspacemacs-additional-packages '()
