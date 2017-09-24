@@ -12,6 +12,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      scala
+     auto-completion
 
      ;; Layers with personal customization
      my-clojure
