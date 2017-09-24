@@ -98,7 +98,9 @@
   (push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
   (push '(ensime . "melpa-stable") package-pinned-packages))
 
-(defun dotspacemacs/user-config ())
-
+(defun dotspacemacs/user-config ()
+  (setq ace-jump-helm-line-autoshow-use-linum t
+        ace-jump-helm-line-default-action 'select
+        ace-jump-helm-line-style 'pre))
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
