@@ -109,6 +109,10 @@
   (evil-goggles-mode)
   (evil-goggles-use-diff-faces)
 
+  (setq
+   nxml-child-indent 4
+   nxml-attribute-indent 4)
+
   (define-key evil-insert-state-map  (kbd "C-o") #'evil-lisp-state))
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
