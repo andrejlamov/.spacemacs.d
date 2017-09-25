@@ -11,6 +11,9 @@
      my-clojure
      my-java
 
+     ;; New layers
+     evil-goggles
+
      ;; Layers
      html
      emacs-lisp
@@ -22,7 +25,7 @@
             shell-protext-eshell-prompt nil
             shell-defaul-shell 'eshell)
      )
-   dotspacemacs-additional-packages '(evil-goggles)
+   dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '()
    dotspacemacs-install-packages 'used-only))
@@ -104,11 +107,6 @@
   (push '(ensime . "melpa-stable") package-pinned-packages))
 
 (defun dotspacemacs/user-config ()
-
-  ;; Evil goggles
-  (evil-goggles-mode)
-  (evil-goggles-use-diff-faces)
-
   ;; nxml
   (setq
    nxml-child-indent 4
