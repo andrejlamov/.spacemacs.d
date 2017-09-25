@@ -18,7 +18,6 @@
      my-helm
      my-clojure
      my-java
-     hello-layer
      )
    dotspacemacs-additional-packages '(evil-goggles)
    dotspacemacs-frozen-packages '()
