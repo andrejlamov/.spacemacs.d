@@ -6,7 +6,6 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(html
-     helm
      emacs-lisp
      git
      scala
@@ -16,6 +15,7 @@
             shell-protext-eshell-prompt nil
             shell-defaul-shell 'eshell)
      ;; Layers with personal customization
+     my-helm
      my-clojure
      my-java
      hello-layer
@@ -102,10 +102,6 @@
   (push '(ensime . "melpa-stable") package-pinned-packages))
 
 (defun dotspacemacs/user-config ()
-  ;; Ace jump
-  (setq ace-jump-helm-line-autoshow-use-linum t
-        ace-jump-helm-line-default-action 'select
-        ace-jump-helm-line-style 'pre)
 
   ;; Evil goggles
   (evil-goggles-mode)
