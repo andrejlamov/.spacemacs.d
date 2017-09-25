@@ -102,17 +102,21 @@
   (push '(ensime . "melpa-stable") package-pinned-packages))
 
 (defun dotspacemacs/user-config ()
+  ;; Ace jump
   (setq ace-jump-helm-line-autoshow-use-linum t
         ace-jump-helm-line-default-action 'select
         ace-jump-helm-line-style 'pre)
 
+  ;; Evil goggles
   (evil-goggles-mode)
   (evil-goggles-use-diff-faces)
 
+  ;; nxml
   (setq
    nxml-child-indent 4
    nxml-attribute-indent 4)
 
+  ;; evil lisp
   (define-key evil-insert-state-map  (kbd "C-o") #'evil-lisp-state))
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
