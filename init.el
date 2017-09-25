@@ -5,7 +5,14 @@
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
-   '(html
+   '(
+     ;; Extended layers
+     my-helm
+     my-clojure
+     my-java
+
+     ;; Layers
+     html
      emacs-lisp
      git
      scala
@@ -14,10 +21,6 @@
      (shell :variables
             shell-protext-eshell-prompt nil
             shell-defaul-shell 'eshell)
-     ;; Layers with personal customization
-     my-helm
-     my-clojure
-     my-java
      )
    dotspacemacs-additional-packages '(evil-goggles)
    dotspacemacs-frozen-packages '()
