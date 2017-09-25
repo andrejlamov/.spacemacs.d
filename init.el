@@ -5,14 +5,16 @@
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
-   '(
+   '(html
      helm
      emacs-lisp
      git
      scala
      auto-completion
      org
-
+     (shell :variables
+            shell-protext-eshell-prompt nil
+            shell-defaul-shell 'eshell)
      ;; Layers with personal customization
      my-clojure
      my-java
