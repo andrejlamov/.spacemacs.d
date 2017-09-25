@@ -11,6 +11,7 @@
      git
      scala
      auto-completion
+     org
 
      ;; Layers with personal customization
      my-clojure
