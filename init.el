@@ -105,6 +105,8 @@
         ace-jump-helm-line-style 'pre)
 
   (evil-goggles-mode)
-  (evil-goggles-use-diff-faces))
+  (evil-goggles-use-diff-faces)
+
+  (define-key evil-insert-state-map  (kbd "C-o") #'evil-lisp-state))
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
