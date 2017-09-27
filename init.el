@@ -24,6 +24,8 @@
      (shell :variables
             shell-protext-eshell-prompt nil
             shell-defaul-shell 'eshell)
+     yaml
+     typescript
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
