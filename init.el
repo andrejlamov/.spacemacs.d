@@ -7,7 +7,10 @@
    dotspacemacs-configuration-layers
    '(
      ;; Extended layers
-     my-helm
+     (helm :variables
+           ace-jump-helm-line-autoshow-use-linum t
+           ace-jump-helm-line-default-action 'select
+           ace-jump-helm-line-style 'pre)
      my-clojure
      my-java
 
