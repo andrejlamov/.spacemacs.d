@@ -29,6 +29,10 @@
             shell-defaul-shell 'eshell)
      yaml
      typescript
+     (gtags :variables gtags-enable-by-default t)
+     markdown
+     python
+     javascript
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
