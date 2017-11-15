@@ -7,10 +7,6 @@
    dotspacemacs-configuration-layers
    '(
      ;; Extended layers
-     (helm :variables
-           ace-jump-helm-line-autoshow-use-linum t
-           ace-jump-helm-line-default-action 'select
-           ace-jump-helm-line-style 'pre)
      my-clojure
      my-java
 
@@ -19,6 +15,10 @@
 
      ;; Layers
      html
+     (helm :variables
+           ace-jump-helm-line-autoshow-use-linum t
+           ace-jump-helm-line-default-action 'select
+           ace-jump-helm-line-style 'pre)
      emacs-lisp
      git
      scala
@@ -32,7 +32,11 @@
      (gtags :variables gtags-enable-by-default t)
      markdown
      python
-     javascript
+     (javascript :variables
+                 js-indent-level 2)
+     treemacs
+     docker
+     react
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
@@ -43,8 +47,9 @@
   (setq-default
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 5
+   dotspacemacs-use-spacelpa t
    dotspacemacs-check-for-update nil
-   dotspacemacs-elpa-subdirectory nil
+   dotspacemacs-elpa-subdirectory 'emacs-version
    dotspacemacs-editing-style 'vim
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner 'official
@@ -83,7 +88,7 @@
    dotspacemacs-helm-position 'bottom
    dotspacemacs-helm-use-fuzzy 'always
    dotspacemacs-enable-paste-transient-state nil
-   dotspacemacs-which-key-delay 0.4
+   dotspacemacs-which-key-delay 0
    dotspacemacs-which-key-position 'bottom
    dotspacemacs-switch-to-buffer-prefers-purpose nil
    dotspacemacs-loading-progress-bar t
@@ -107,13 +112,14 @@
    dotspacemacs-frame-title-format "%I@%S"
    dotspacemacs-icon-title-format nil
    dotspacemacs-whitespace-cleanup nil
-   dotspacemacs-zone-out-when-idle nil
+   dotspacemacs-zone-out-when-idle (* 2 60)
    dotspacemacs-pretty-docs nil
    ))
 
 (defun dotspacemacs/user-init ()
-  (push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
-  (push '(ensime . "melpa-stable") package-pinned-packages))
+  ;; (push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
+  ;; (push '(ensime . "melpa-stable") package-pinned-packages)
+  )
 
 (defun dotspacemacs/user-config ()
   ;; nxml
