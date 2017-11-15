@@ -128,6 +128,25 @@
    nxml-attribute-indent 4)
 
   ;; evil lisp
-  (define-key evil-insert-state-map  (kbd "C-o") #'evil-lisp-state))
+  (define-key evil-insert-state-map  (kbd "C-o") #'evil-lisp-state)
+
+  ;; org setup
+  (with-eval-after-load 'org
+    (setq org-default-notes-file (concat org-directory "/todo.org")))
+
+  ;; spaceline
+  (setq powerline-default-separator nil)
+
+  ;; adaptive wrap
+  (with-eval-after-load 'adaptive-wrap
+    (setq-default adaptive-wrap-extra-indent 2))
+
+  (add-hook 'visual-line-mode-hook
+            (lambda ()
+              (adaptive-wrap-prefix-mode +1)
+              (diminish 'visual-line-mode)))
+
+  (global-visual-line-mode +1)
+  )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
