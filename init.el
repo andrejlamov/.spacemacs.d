@@ -14,6 +14,7 @@
      evil-goggles
 
      ;; Layers
+     parinfer
      html
      (helm :variables
            ace-jump-helm-line-autoshow-use-linum t
@@ -130,6 +131,13 @@
   ;; evil lisp
   (define-key evil-insert-state-map  (kbd "C-o") #'evil-lisp-state)
 
+  ;; parinfer
+  (with-eval-after-load 'parinfer
+    (define-key parinfer-mode-map (kbd "<tab>")
+      (lambda ()
+        (interactive)
+        (parinfer-smart-tab:dwim-right)
+        (parinfer-indent-instantly))))
   ;; org setup
   (with-eval-after-load 'org
     (setq org-default-notes-file (concat org-directory "/todo.org")))
